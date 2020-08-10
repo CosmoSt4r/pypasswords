@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name = 'pypasswords', 
   packages = ['pypasswords'],
-  version = '0.1', 
+  version = '0.2', 
   license='MIT', 
   description = 'Working with passwords made simple', 
   author = 'CosmoStar',                   
   author_email = 'JustCosmos@yandex.ru',
   url = 'https://github.com/CosmoSt4r/pypasswords',
-  download_url = 'https://github.com/CosmoSt4r/pypasswords/archive/v_01.tar.gz',
+  download_url = 'https://github.com/CosmoSt4r/pypasswords/archive/v_02.tar.gz',
   keywords = ['password', 'passwords', 'check', 'hash', 'simple'],
   install_requires=[
           'hashlib',
