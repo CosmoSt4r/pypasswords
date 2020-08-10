@@ -1,2 +1,4 @@
-pypasswords\__pycache__
-pypasswords\.idea
+pypasswords/__pycache__/
+pypasswords/.idea/
+*.xml
+*.pyc

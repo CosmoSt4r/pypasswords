@@ -1,4 +1,6 @@
-sault_dictionary = '1234567890\
-qwertyuiopasdfghjklzxcvbnm\
-QWERTYUIOPASDFGHJKLZXCVBNM\
-!@#$%^&*()-=_+|,./<>?;:"[]{}'
+numbers = '1234567890'
+letters = 'qwertyuiopasdfghjklzxcvbnm\
+QWERTYUIOPASDFGHJKLZXCVBNM'
+symbols = '!@#$%^&*()-=_+|,./<>?;:"[]{}'
+
+salt_dictionary = numbers + letters + symbols

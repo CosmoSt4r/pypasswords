@@ -1,1 +1,1 @@
-from .main import hash_it
+from .main import *
