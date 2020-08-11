@@ -28,11 +28,11 @@ def hash_it(password, hash_type='sha256', salting=False,
             salt = ''
             for _ in range(length):
                 salt += choice(salt_dictionary)
-            return word + salt
+            return word + salt, salt
         else:
             # using static_salt
             salt = static
-            return word + salt
+            return word + salt, salt
 
     def add_local_parameter(word, parameter):
 
@@ -41,13 +41,16 @@ def hash_it(password, hash_type='sha256', salting=False,
 
     # main function to hash the password
     if salting:
-        password = salt_password(password, static_salt, salt_length)
+        password, salt = salt_password(password, static_salt, salt_length)
 
     if local_parameter:
         password = add_local_parameter(password, local_parameter)
 
     password = hash_password(password, hash_type)
-    return password
+    if salting:
+        return password, salt
+    else:
+        return password
 
 
 def check_it(password, check_type='strength', stop_chars=''):
