@@ -15,10 +15,10 @@ setup(
       ],
   classifiers=[
       
-    'Development Status :: 2 - Beta',
+    'Development Status :: 4 - Beta',
 
     'Intended Audience :: Developers',
-    'Security :: Cryptography',
+    'Topic :: Software Development :: Build Tools',
 
     'License :: OSI Approved :: MIT License',
 
