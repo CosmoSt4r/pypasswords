@@ -1,14 +1,25 @@
 from distutils.core import setup
+from setuptools import setup
+
+# read the contents of your README file
+from os import path
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
+
 setup(
   name = 'pypasswords', 
   packages = ['pypasswords'],
-  version = '0.3', 
+  version = '0.4', 
   license='MIT', 
-  description = 'Working with passwords made simple', 
+  description = 'Working with passwords made simple',
+  long_description=long_description,
+  long_description_content_type='text/markdown',
   author = 'CosmoStar',                   
   author_email = 'JustCosmos@yandex.ru',
   url = 'https://github.com/CosmoSt4r/pypasswords',
-  download_url = 'https://github.com/CosmoSt4r/pypasswords/archive/v_03.tar.gz',
+  download_url = 'https://github.com/CosmoSt4r/pypasswords/archive/v_04.tar.gz',
   keywords = ['password', 'passwords', 'check', 'hash', 'simple'],
   install_requires=[
           'zxcvbn',
@@ -19,6 +30,7 @@ setup(
 
     'Intended Audience :: Developers',
     'Topic :: Software Development :: Build Tools',
+    'Topic :: Security :: Cryptography',
 
     'License :: OSI Approved :: MIT License',
 

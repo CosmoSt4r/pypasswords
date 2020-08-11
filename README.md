@@ -64,7 +64,7 @@ check_it('qwerty')
 **check_it** method has the following parameters:
 * **password** - (string)
 * **check_type** - (string). *Optional*. There are 2 check types: strength and valid. Default: *strength*
-  - *strength* check type will return number 0-100 indicating strength of your password. If strength more than 30 then the password is good.If strength more than 50 then the password is strong.
+  - *strength* check type will return number indicating strength of your password. If strength more than 10 then the password is strong.
   - *valid* check type will return True or False whether password has 'stop chars' or not. You have to specify *stop_chars* to use this check type.
 * **stop_chars** - (string). *Optional*. Use to specify stop characters to check your password for validity.
 

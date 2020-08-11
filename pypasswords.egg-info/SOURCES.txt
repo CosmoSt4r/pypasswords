@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+pypasswords/__init__.py
+pypasswords/config.py
+pypasswords/main.py
+pypasswords.egg-info/PKG-INFO
+pypasswords.egg-info/SOURCES.txt
+pypasswords.egg-info/dependency_links.txt
+pypasswords.egg-info/requires.txt
+pypasswords.egg-info/top_level.txt
