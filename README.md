@@ -35,7 +35,6 @@ You can easily hash your password with just one line of code:
 
 ```py
 hash_it('qwerty')
->>> 65e84be33532fb784c48129675f9eff3a682b27168c0ea744b2cf58ee02337c5
 ```
 
 **hash_it** method has the following parameters:
