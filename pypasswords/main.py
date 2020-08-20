@@ -1,6 +1,6 @@
 import hashlib
 from random import choice
-from config import salt_dictionary, numbers, letters, symbols
+from .config import salt_dictionary, numbers, letters, symbols
 from zxcvbn import zxcvbn
 from math import log
 
