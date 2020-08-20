@@ -25,14 +25,14 @@ def hash_it(password, hash_type='sha256', salting=False,
         # adding salt to the password
         if not static:
             # if static_salt isn't specified, generate the salt
-            salt = ''
+            pass_salt = ''
             for _ in range(length):
-                salt += choice(salt_dictionary)
-            return word + salt, salt
+                pass_salt += choice(salt_dictionary)
+            return word + pass_salt, pass_salt
         else:
             # using static_salt
-            salt = static
-            return word + salt, salt
+            pass_salt = static
+            return word + pass_salt, pass_salt
 
     def add_local_parameter(word, parameter):
 
@@ -40,14 +40,20 @@ def hash_it(password, hash_type='sha256', salting=False,
         return word + parameter
 
     # main function to hash the password
+    salt = None
+
+    # add the salt if it's given
     if salting:
         password, salt = salt_password(password, static_salt, salt_length)
 
+    # add the local parameter if it's given
     if local_parameter:
         password = add_local_parameter(password, local_parameter)
 
+    # hash the password
     password = hash_password(password, hash_type)
-    if salting:
+
+    if salt:
         return password, salt
     else:
         return password
@@ -102,3 +108,18 @@ def generate_it(strength=2, length=12):
     else:
         # Unknown strength
         raise ValueError(f'unsupported strength. Try using 1, 2 or 3.')
+
+
+def match_it(user_password, hashed_password, hash_type='sha256', salt='', local_parameter=''):
+
+    # adding salt and local parameter to the given password
+    password = user_password + salt + local_parameter
+
+    # hashing given password
+    password = hash_it(password, hash_type=hash_type)
+
+    # match given password with given hash
+    if password == hashed_password:
+        return True
+    else:
+        return False
