@@ -21,7 +21,7 @@ $ pip install pypasswords
 First you need to import all methods from this package
 
 ```py
-from pypasswords import hash_it, check_it, generate_it
+from pypasswords import hash_it, check_it, generate_it, match_it
 ```
 ... or simply
 
